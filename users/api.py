@@ -83,7 +83,12 @@ class UserLogin(Resource):
 
         if user and user.check_password(args['password']):
             # Generate the header
-            header = generate_token_header(user.username, config.PRIVATE_KEY)
+            payload = {
+                'userid': user.id,
+                'username': user.username,
+                'email': user.email
+            }
+            header = generate_token_header(payload, config.PRIVATE_KEY)
             return {'Authorized': header}, http.client.OK
 
         return {"message": "Invalid email or password"}, http.client.UNAUTHORIZED

@@ -82,14 +82,20 @@ def test_invalid_token_header_no_username():
 
 
 def test_valid_token_header_invalid_key():
-    header = token_validation.generate_token_header(
-        'whiteboardwarrior', PRIVATE_KEY)
+    payload = {
+        'username': 'whiteboardwarrior',
+        'email': 'engineer@whiteboardwarriors.org'
+    }
+    header = token_validation.generate_token_header(payload, PRIVATE_KEY)
     result = token_validation.validate_token_header(header, INVALID_PUBLIC_KEY)
     assert None is result
 
 
 def test_valid_token_header():
-    header = token_validation.generate_token_header(
-        'whiteboardwarrior', PRIVATE_KEY)
+    payload = {
+        'username': 'whiteboardwarrior',
+        'email': 'engineer@whiteboardwarriors.org'
+    }
+    header = token_validation.generate_token_header(payload, PRIVATE_KEY)
     result = token_validation.validate_token_header(header, PUBLIC_KEY)
-    assert 'whiteboardwarrior' == result
+    assert 'whiteboardwarrior' == result['username']
