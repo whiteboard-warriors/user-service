@@ -1,7 +1,7 @@
 services: 
     - docker
 env:
-    - DOCKER_COMPOSE_VERSION=1.23.2
+    - DOCKER_COMPOSE_VERSION=1.25.4
 before_install:
     - sudo rm /usr/local/bin/docker-compose 
     - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -9,8 +9,11 @@ before_install:
     - sudo mv docker-compose /usr/local/bin 
     - docker --version
     - docker-compose version
-script:
-    - docker-compose build db
-    - docker-compose build test
-    - docker-compose run test
-        
+jobs:
+    include:
+        - stage: tests 
+          name: "Unit Tests"
+          script:
+            - docker-compose build db
+            - docker-compose build test
+            - docker-compose run test
