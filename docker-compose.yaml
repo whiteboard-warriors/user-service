@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+    test:
+        env_file: test.env
+        environment:
+            - PYTHONDONTWRITEBYTECODE=1
+        build:
+            dockerfile: docker/app/Dockerfile
+            context: .
+        entrypoint: pytest
+        depends_on:
+            - db
+        volumes:
+            - ./UserService:/opt/code
     db:
         build:
             context: .
