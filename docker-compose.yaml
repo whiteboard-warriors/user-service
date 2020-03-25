@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+    db:
+        build:
+            context: .
+            dockerfile: ./docker/db/Dockerfile
+            args:
+                # These values should be in sync with environment
+                # for development. If you change them, you'll
+                # need to rebuild the container
+                - POSTGRES_DB=users
+                - POSTGRES_USER=postgres
+                - POSTGRES_PASSWORD=somepassword
+                - POSTGRES_PORT=5432
+        ports:
+        - '5432:5432'
+    # Producion related
+    server:
+        env_file: environment.env
+        image: users_service
+        build:
+            context: .
+            dockerfile: docker/app/Dockerfile
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db

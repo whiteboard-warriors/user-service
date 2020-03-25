@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 import dotenv
 import os
 
-dotenv.load_dotenv()
+dotenv.load_dotenv(verbose=True)
 db_params = {
     'host': os.environ['POSTGRES_HOST'],
     'database': os.environ['POSTGRES_DB'],
