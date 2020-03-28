@@ -27,18 +27,18 @@ jobs:
     - docker-compose build db
     - docker-compose build test
     - docker-compose run test
-  - stage: push 
-    script:
-    - docker-compose build server
-    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
-    - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
-    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
-    deploy:
-    - provider: script
-        script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH 
-        on:
-          branch: master
-    - provider: script
-      script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_TAG 
-        on:
-          tags: True
+  # - stage: push 
+  #   script:
+  #   - docker-compose build server
+  #   - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
+  #   - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
+  #   - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
+  #   deploy:
+  #   - provider: script
+  #       script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH 
+  #       on:
+  #         branch: master
+  #   - provider: script
+  #     script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_TAG 
+  #       on:
+  #         tags: True
