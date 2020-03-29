@@ -30,6 +30,5 @@ jobs:
     name: Push to Docker Hub
     script:
     - docker-compose build server
-    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
-    - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
-    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
+    - docker tag users_service:latest whiteboardwarriors/users-service:$GIT_SHA
+    - docker push whiteboardwarriors/users-service:$GIT_SHA
