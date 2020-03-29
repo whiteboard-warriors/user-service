@@ -9,7 +9,7 @@ env:
   - secure: VQvyBXCZPjgAAe2ay6T1ItyR9VM1xoOtVxlIjwD0NAxZHb7jFPsoyFCi1tA1AeVgzbufX4LpoFAj8X6lWFki8SIesKLAQVD/+YhsWW/165eVDaBnsUFXn3UnKnEOcM2+2wk40PIu8PNM6UO19ThkEnFvxOq7dfTAUN37KyxAkByV6qtgoTOwE2q/VU5Fvj+cUpCs9qoqF4DpVQzH/ly4pxOgy6ai8NOCsiNpRGTaSieHwGuY9NNqupscWmEta2HYvqj0FLjslgnP0VE0GyCogD/2CRFUbWf7FCLKYqytzgdOxFN4YUyQN8U+hpPGyANTqsAul2kViZ2zEsxOd2aRQG3NcU4Xjd8kSOHXPtccytZHmdyK+hV/WV2iG1nj50jz+8mNqPwPbXYureu+2SRmmk0Xdp2mZSEI/cS8ivKfuM39VL1ySuxVI6g95i6rnElLHZ9g/qIBDNIVxu7FRzO6A1PNgI9PEiG2dE32AUBaRZctvvbHC/yJobFrjL7cIfdlInmiUbF2umpJiFGJY8RkrxHvFXvIOTFIwMSwJPN1OFx6aaiNpp6IECnd5XSiBRzrmVaJdQd9mr468UtkVrmytF9XtdKYoCugLdE5BiIVTDkZb25DHivHvaZVtAg8JCtgvdb+hdCfEL3bkZINKZePPD5J5oyQleH+0YjI9bzKe0k=
 before_install:
 - echo "Login to Docker Hub"
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" -- password-stdin
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - sudo rm /usr/local/bin/docker-compose
 - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
   -s`-`uname -m` > docker-compose
@@ -27,12 +27,13 @@ jobs:
     - docker-compose build db
     - docker-compose build test
     - docker-compose run test
-  # - stage: push 
-  #   script:
-  #   - docker-compose build server
-  #   - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
-  #   - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
-  #   - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
+  - stage: push 
+    name: "Push to Docker Hub"
+    script:
+    - docker-compose build server
+    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
+    - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
+    - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
   #   deploy:
   #   - provider: script
   #       script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH 
