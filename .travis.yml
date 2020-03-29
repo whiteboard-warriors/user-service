@@ -4,9 +4,8 @@ env:
   matrix:
   - DOCKER_COMPOSE_VERSION=1.25.4
   global:
-  - secure: vS7up0Nxy0FyE1u2o3RqH2kByfc024GLXEF0LddQgo6WLBPzwMUzcTUouo+Jn2zq85dcqhLaNeN/VgDyKwkzpkxPgWR0zmtLFzPJxNIr1sxBT9mLeYmgGhN5aAxjKuldyWYnu9SBw62qLiKn2Bl8KFQFOgA9lbHs9O4kV9ddMiR3fJ2csyu7FTbt6oDVTwQL+YkBb8m6/9FUlk4RlJmnUPdj9BD3WnEPnUHfPhorFze2Z5cwDzSiPvbEB79Xx/r5AhYfST5W+MyatZ0+SZ/rU7qV3tcXaIphkqmZVJNnBptCU0jCbDhP7KtWQUpu0VWuOa2tuVFyuo2msSKuXC8UMWf4GNGrMsu2sYcVkP48vhQv2P0ucH7GHW89fHRWjX2qcqlrw9OFA66r0eNC9ZKjl1cdIAaFToEW079JG5i1mRkU3A1xlhBDmURCzfM65DSFEtJSM+akgqBBDRlCZGIgeBiA2T2PLhrr99uCRl+qN1eNuIZ0tq+iBf124iCZsfjTSj2INvD0wJZSfNdaPzTZccQDk17WmXSfdRjI7xFbII7/frRKXQepIWM5b5N/uukn/25PUT4D7t2OlCXXE5gVS8GUcRNIX28cGqmRTfmi/hJY0NhVi0ukIxm4bHRnVBqlhLDIO2w7+i50vDFH9W0ymJ8jEjA3wiRQt0PaXYPCies=
-  - secure: lBcrfj2jMo3Fxr81+R9w/NtoDpY7LczEvP7Ebqe2Yu8HY84n7/PkWoKTN2AlBWN/IYda2dNY0h/1Al8gTXdFCR9vYrNdcdOMnJfTcer2A93kogppDbx5X/gT2Fg0pl5K4yf2/13q1H4LNtzMb82E17j8BVkxL9cHsK5POIOV6ZvMP/th9uQh3DyUOOkdPDokTa+R/XxBFumSDumUXNgIWVPW41+0o4EcVY/qUa6zHiUn9Ht5k7U00WmAZRZewbshSghMXI3/ouYultuwGTWT0fPKEusamy4lUZh7uTklKvjVgf0aq4buO7bfTP1loGTtiu9cVxsVcgCWp3SpbbTgrfCmj2UkWgjguT7Yh8Qoz1LYRB6JDJ2PO25BBI4hNfpObSsY6OJUgG2qREeFlNJTbb71K53RQF3oOZS6t0lZk5cZXoCjXeNmCAuiKlvT1BFNPRWGvqSP2Uiag9R6t1u3ffmZgWv1/9gf0ZIOlj3M97S470PTzfRbOCcsM1dFwlZkXcdKviKG4/WfAGZ8Hc9RCSIax4t7ByTq2o8ZTmZZMtvoKgRL2xEpXqJ1FHCtvyHn5bXf71XP5A8XGJwwe5bsuLCIZ0zmveGDkLx8oDNmevatiQL4sEsYohJ974byo3rtWG+Po5C/1tTAEapn9JHGTNecPYkqoW4wyU5Rbt9sOjo=
-  - secure: VQvyBXCZPjgAAe2ay6T1ItyR9VM1xoOtVxlIjwD0NAxZHb7jFPsoyFCi1tA1AeVgzbufX4LpoFAj8X6lWFki8SIesKLAQVD/+YhsWW/165eVDaBnsUFXn3UnKnEOcM2+2wk40PIu8PNM6UO19ThkEnFvxOq7dfTAUN37KyxAkByV6qtgoTOwE2q/VU5Fvj+cUpCs9qoqF4DpVQzH/ly4pxOgy6ai8NOCsiNpRGTaSieHwGuY9NNqupscWmEta2HYvqj0FLjslgnP0VE0GyCogD/2CRFUbWf7FCLKYqytzgdOxFN4YUyQN8U+hpPGyANTqsAul2kViZ2zEsxOd2aRQG3NcU4Xjd8kSOHXPtccytZHmdyK+hV/WV2iG1nj50jz+8mNqPwPbXYureu+2SRmmk0Xdp2mZSEI/cS8ivKfuM39VL1ySuxVI6g95i6rnElLHZ9g/qIBDNIVxu7FRzO6A1PNgI9PEiG2dE32AUBaRZctvvbHC/yJobFrjL7cIfdlInmiUbF2umpJiFGJY8RkrxHvFXvIOTFIwMSwJPN1OFx6aaiNpp6IECnd5XSiBRzrmVaJdQd9mr468UtkVrmytF9XtdKYoCugLdE5BiIVTDkZb25DHivHvaZVtAg8JCtgvdb+hdCfEL3bkZINKZePPD5J5oyQleH+0YjI9bzKe0k=
+  - secure: NqhRrp/JMb8H6gq8eTcNK/M/KFb0pOzUIDMAQ461oDX6rdnEIyYsCTckOvUc4o/weGasfqXnItBC7gpkgNLmzlWAiF17g/TDMbdw5pfWAnwh4DSIM+PI/m3839FqTIs3qU2S92KHoyEZod+sdImbaEDh/V8nUGQXPodCK4asPTQ0S5VxDEFPVVsZA0OvZbZ1REZjQIfMJyeVNOZ3+tZ4fbYBTBNBkjY9l+Kr/dGxLe3c//NiRqr0OgxagVWxXHH5uNzPAVkN0C1gjKuSwK92Huzpt4h6l1P+KdwsSJRl27or+5sw78yb9ZjRJZ+iQldAFywhCxgJK5LrC+TFMQmWIM+3rtOooa8bBR6JdOskDjaPeTCJz9vo8xvAEeQref2avu3Ge3ckpD06HOnqi+J39z+rOI8xSjBULiTMKTwEtQlkiwi+MqyyGV5dAY9obiZqTMduolp8DWGTz1zYtPIE2tyR3Nc08x/bUMmjKwzGD/IYmx9vhJ318elzFrvwuh+x51YLdfmrvBe8+/HTiihTg8f80ax0ojMmmsgKTTILqAXxfBKL0GqlF7r0H4THCc/E6KdFGtw6mZRnKIIyRZvlqlr2trULBzn+EIYbK6tYNpHx/oef3x82q5BG1KFWSt1CGWO6n7/VfpigCW7z2bMwzRzVNb9xVycRLHDDPBGXD9k=
+  - secure: Z+4UyiQFYm6KB/tmWiuDwUjphU5eLQGbqQ9qqUpsEd2TAs59THMEYSFTiZovsxH/aqYGwqv0n5XXRPzH3AWG9sKXzFPrLMiFy+TzEUwS0I5mWZHBoA88goSEEAairi3k3t1B5jKU4F+EboWoWyPbLSV5GO15sfJXW0+L/E/jn2AgRCP7tPvIo/yZ/iOYDXT10JPGNUNFLh7ipHUmaA1JAYA1alTuy1ox95YQPpgSrUD0vCl3Tk6gGn0eRHf2XKmfkJnqYKyNmJz6JuS65e4ERT2gOIBFeuibgHjiFRfyxrLcSPXQ5dlqo4MhyNiSp1RhRmImHhjyQ0+9oma3LLIxCn10gnywM+zOKPTEePk28H4PDU5ZaOglm/0xZO5eYKeEuTCFfUM+MQCEaAaO1Bf3PbcfEOBi/6fcUiQ+2wLlE2mXOyRZ/ClOZk+iVS+9KkBz/Q9ZQj6JcM1tI8G8UTfihVHqxaCTWZZkfRgQAZ6nKCtnstEQCXaU99VjcBJUlZFmBNEuE7cve0AzJRYiVKzQseS4TDple4kMIls7KGE//AY1eVnNJNAjH+1H2w0SgREgDr3P6XtsNpCOESujH0rIZUY4AoBPlg1WLuzRA9NZQJ430Gtpv7rGLTfhlwfaolPet1x/QSa7hYYXAzALUX1V3SvnS4GNoqEJm3yP2vQvLCI=
 before_install:
 - echo "Login to Docker Hub"
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
@@ -27,19 +26,10 @@ jobs:
     - docker-compose build db
     - docker-compose build test
     - docker-compose run test
-  - stage: push 
-    name: "Push to Docker Hub"
+  - stage: push
+    name: Push to Docker Hub
     script:
     - docker-compose build server
     - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$GIT_SHA
     - docker push whiteboardwarriors/user-service/users-service:$GIT_SHA
     - docker tag users_service:latest whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH
-  #   deploy:
-  #   - provider: script
-  #       script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_BRANCH 
-  #       on:
-  #         branch: master
-  #   - provider: script
-  #     script: docker push whiteboardwarriors/user-service/users-service:$TRAVIS_TAG 
-  #       on:
-  #         tags: True
