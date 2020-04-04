@@ -1,0 +1,15 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: users-service-ingress
+    namespace: example
+spec:
+    rules:
+        - host: users-service.example.local
+          http:
+            paths:
+              - backend:
+                  serviceName: users-service
+                  servicePort: 80
+                path: /  

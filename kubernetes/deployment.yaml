@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: users-service
+    labels:
+        app: users-service
+    namespace: example
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: users-service
+    template:
+        metadata:
+            labels:
+                app: users-service
+        spec:
+            containers:
+                - name: users-service
+                  image: users_service:latest
+                  imagePullPolicy: Never
+                  ports:
+                  - containerPort: 8000
+                  env:
+                  - name: DATABASE_ENGINE
+                    value: POSTGRESQL
+                  - name: POSTGRES_DB
+                    value: thoughts
+                  - name: POSTGRES_USER
+                    value: postgres
+                  - name: POSTGRES_PASSWORD
+                    value: somepassword
+                  - name: POSTGRES_PORT
+                    value: "5432"
+                  - name: POSTGRES_HOST
+                    value: "127.0.0.1"
+                - name: users-service-db
+                  image: user-service_db:latest
+                  imagePullPolicy: Never
